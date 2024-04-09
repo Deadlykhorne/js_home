@@ -1,5 +1,6 @@
 function myIsNaN(value) {
-    return typeof value === 'number' && Number.isNaN(value); 
+    // Перевірка, чи є вхідне значення числом та чи не дорівнює воно самому собі
+    return typeof value === 'number' && value !== value;
 }
 
 console.log(myIsNaN(4)); // false
