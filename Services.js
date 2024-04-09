@@ -31,7 +31,7 @@ var services = {
     }
 };
 
-services['Манікюр'] = "300 грн";
+services['Розбити скло'] = "200 грн";
 console.log("Загальна вартість послуг:", services.price() + " грн");
 console.log("Мінімальна вартість послуг:", services.minPrice() + " грн");
 console.log("Максимальна вартість послуг:", services.maxPrice() + " грн");
