@@ -8,7 +8,7 @@ function pad(str, symbol, count, isStart) {
     }
 
     const lengthDiff = Math.max(0, count - str.length);
-    const padding = symbol.repeat(Math.min(1, lengthDiff)); // Використав Math.min(1, lengthDiff), щоб додати не більше одного символа
+    const padding = lengthDiff > 0 ? symbol.repeat(lengthDiff) : '';
 
     if (isStart) {
         return padding + str;
@@ -17,17 +17,9 @@ function pad(str, symbol, count, isStart) {
     }
 }
 
-function padStart(str, symbol, count) {
-    return pad(str, symbol, count, true);
-}
-
-function padEnd(str, symbol, count) {
-    return pad(str, symbol, count, false);
-}
-
-console.log(padStart('qwerty', '+', 5)); // "+++++qwerty"
-console.log(padEnd('qwerty', '+', 5)); // "qwerty+++++"
-console.log(padStart('qwerty', '+', 6)); // "+qwerty"
-console.log(padEnd('qwerty', '+', 6)); // "qwerty+"
-console.log(padStart('qwerty', '+', 4)); // "+qwerty"
-console.log(padEnd('qwerty', '+', 4)); // "qwerty+"
+console.log(pad('qwerty', '+', 5, true)); // "+++++qwerty"
+console.log(pad('qwerty', '+', 5, false)); // "qwerty+++++"
+console.log(pad('qwerty', '+', 6, true)); // "+qwerty"
+console.log(pad('qwerty', '+', 6, false)); // "qwerty+"
+console.log(pad('qwerty', '+', 4, true)); // "++qwerty"
+console.log(pad('qwerty', '+', 4, false)); // "qwerty++"
