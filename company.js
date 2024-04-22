@@ -41,9 +41,7 @@ const company = {
     ]
 };
 
-// Функція для пошуку компанії за назвою
 function findValueByKey(companyName, company) {
-    // Перевіряємо поточний об'єкт
     if (company.name === companyName) {
         return company;
     }
@@ -76,10 +74,8 @@ function findValueByKey(companyName, company) {
         }
     }
 
-    // Повертаємо null, якщо компанія не знайдена
     return null;
 }
 
-// Пошук та вивід компанії за назвою
 const foundCompany = findValueByKey('Клієнт 1.2.3', company);
 console.log(foundCompany ? foundCompany : 'Компанія не знайдена');
