@@ -70,6 +70,11 @@
 						"key": "Content-Type",
 						"value": "text/xml; charset=utf-8",
 						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
 					}
 				],
 				"body": {
